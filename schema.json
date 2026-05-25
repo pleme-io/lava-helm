@@ -1,0 +1,84 @@
+{
+  "format_version": "1.0",
+  "provider_schemas": {
+    "registry.terraform.io/helm/helm": {
+      "provider": {
+        "version": 0,
+        "attributes": {},
+        "block_types": {}
+      },
+      "resource_schemas": {
+        "helm_release": {
+          "version": 1,
+          "description": "",
+          "attributes": {
+            "name": {
+              "type": "string",
+              "required": true,
+              "description": ""
+            },
+            "chart": {
+              "type": "string",
+              "required": true,
+              "description": ""
+            },
+            "repository": {
+              "type": "string",
+              "optional": true,
+              "description": ""
+            },
+            "version": {
+              "type": "string",
+              "optional": true,
+              "description": ""
+            },
+            "namespace": {
+              "type": "string",
+              "optional": true,
+              "description": ""
+            },
+            "values": {
+              "type": "string",
+              "optional": true,
+              "description": ""
+            },
+            "create_namespace": {
+              "type": "bool",
+              "optional": true,
+              "description": ""
+            },
+            "id": {
+              "type": "string",
+              "computed": true,
+              "description": ""
+            }
+          },
+          "block_types": {}
+        },
+        "helm_repository": {
+          "version": 1,
+          "description": "",
+          "attributes": {
+            "name": {
+              "type": "string",
+              "required": true,
+              "description": ""
+            },
+            "url": {
+              "type": "string",
+              "required": true,
+              "description": ""
+            },
+            "id": {
+              "type": "string",
+              "computed": true,
+              "description": ""
+            }
+          },
+          "block_types": {}
+        }
+      },
+      "data_source_schemas": {}
+    }
+  }
+}
